@@ -310,7 +310,7 @@ def login():
     emailAddress = thisAddon.getSetting('emailAddress')
     password = thisAddon.getSetting('password')
     formdata = { "login_email" : emailAddress, "login_pass": password, '__RequestVerificationToken' : request_verification_token[0] }
-    callServiceApi("/User/_Login", formdata, headers = [('Referer', 'http://tfc.tv/User/Login')], base_url = 'https://tfc.tv')
+    callServiceApi("/User/_Login", formdata, headers = [('Referer', 'https://tfc.tv/User/_Login')], base_url = 'https://tfc.tv')
     # loginData = json.loads(jsonData)
     # if (not loginData) or (loginData and loginData.has_key('errorCode') and loginData['errorCode'] != 0):
         # xbmc.executebuiltin('Notification(%s, %s)' % ('Login Error', loginData['errorMessage'] if loginData.has_key('errorMessage') else 'Could not login'))
